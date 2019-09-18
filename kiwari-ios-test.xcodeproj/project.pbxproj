@@ -17,6 +17,7 @@
 		B142DF542331EFD30027681B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF532331EFD30027681B /* ChatViewController.swift */; };
 		B142DF562331FA980027681B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF552331FA980027681B /* User.swift */; };
 		B142DF58233205DC0027681B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF57233205DC0027681B /* MainNavigationController.swift */; };
+		B142DF5A23320A1D0027681B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B142DF5923320A1D0027681B /* GoogleService-Info.plist */; };
 		D6C640918252367CA865D2C5 /* Pods_kiwari_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804054587CD02433FC097EB4 /* Pods_kiwari_ios_test.framework */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +36,7 @@
 		B142DF532331EFD30027681B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		B142DF552331FA980027681B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		B142DF57233205DC0027681B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		B142DF5923320A1D0027681B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BD334D8BF6B3049D8227A995 /* Pods-kiwari-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +101,7 @@
 				B142DF532331EFD30027681B /* ChatViewController.swift */,
 				B142DF552331FA980027681B /* User.swift */,
 				B142DF57233205DC0027681B /* MainNavigationController.swift */,
+				B142DF5923320A1D0027681B /* GoogleService-Info.plist */,
 			);
 			path = "kiwari-ios-test";
 			sourceTree = "<group>";
@@ -164,6 +167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B142DF442331D7F20027681B /* LaunchScreen.storyboard in Resources */,
+				B142DF5A23320A1D0027681B /* GoogleService-Info.plist in Resources */,
 				B142DF412331D7F20027681B /* Assets.xcassets in Resources */,
 				B142DF3F2331D7EB0027681B /* Main.storyboard in Resources */,
 			);
