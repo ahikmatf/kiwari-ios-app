@@ -53,23 +53,17 @@ internal struct Message: MessageType {
     
     init?(document: QueryDocumentSnapshot) {
         let data = document.data()
-        print("YEEEY")
-        print(data)
         
         guard let senderID = data["senderID"] as? String else {
-            print("error id")
             return nil
         }
         guard let senderName = data["senderName"] as? String else {
-            print("error name")
             return nil
         }
         guard let content = data["content"] as? String else {
-            print("error content")
             return nil
         }
         guard let sentDate = data["created"] as? Timestamp else {
-            print("error date")
             return nil
         }
 

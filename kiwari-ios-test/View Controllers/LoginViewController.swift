@@ -93,8 +93,6 @@ extension LoginViewController: UITextFieldDelegate {
             return (false, nil)
         }
         
-        print(text)
-        
         if textField == emailAddressTextField {
             return (isValidEmail(emailStr: text), "Please check your email")
         }
@@ -107,7 +105,6 @@ extension LoginViewController: UITextFieldDelegate {
     }
     
     func isValidEmail(emailStr:String) -> Bool {
-        print(emailStr)
         let emailRegEx = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}"
         
         let emailPred = NSPredicate(format:"SELF MATCHES %@", emailRegEx)

@@ -97,8 +97,6 @@ class ChatViewController: MessagesViewController {
         id = id.replacingOccurrences(of: ".", with: "")
         id = id.replacingOccurrences(of: "@", with: "")
         
-        print(id)
-        
         return id
     }
     
@@ -146,9 +144,7 @@ class ChatViewController: MessagesViewController {
     }
 
     func handleDocumentChange(_ change: DocumentChange) {
-        print(change.document.data())
         guard let message = Message(document: change.document) else {
-            print("error")
             return
         }
         

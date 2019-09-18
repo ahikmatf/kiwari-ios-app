@@ -92,21 +92,45 @@
 		B142DF382331D7EB0027681B /* kiwari-ios-test */ = {
 			isa = PBXGroup;
 			children = (
-				B142DF4F2331ECF70027681B /* FriendListViewController.swift */,
 				B142DF392331D7EB0027681B /* AppDelegate.swift */,
-				B142DF3B2331D7EB0027681B /* LoginViewController.swift */,
-				B142DF3D2331D7EB0027681B /* Main.storyboard */,
-				B142DF402331D7F20027681B /* Assets.xcassets */,
-				B142DF422331D7F20027681B /* LaunchScreen.storyboard */,
-				B142DF452331D7F20027681B /* Info.plist */,
-				B142DF512331EE650027681B /* Message.swift */,
-				B142DF532331EFD30027681B /* ChatViewController.swift */,
-				B142DF552331FA980027681B /* UserChat.swift */,
-				B142DF57233205DC0027681B /* MainNavigationController.swift */,
-				B142DF5923320A1D0027681B /* GoogleService-Info.plist */,
-				B142DF5B23325C640027681B /* DatabaseRepresentation.swift */,
+				B142DF5E233279910027681B /* Models */,
+				B142DF5D233279730027681B /* View Controllers */,
+				B142DF5F233279DD0027681B /* Supporting Files */,
 			);
 			path = "kiwari-ios-test";
+			sourceTree = "<group>";
+		};
+		B142DF5D233279730027681B /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				B142DF4F2331ECF70027681B /* FriendListViewController.swift */,
+				B142DF3B2331D7EB0027681B /* LoginViewController.swift */,
+				B142DF532331EFD30027681B /* ChatViewController.swift */,
+				B142DF57233205DC0027681B /* MainNavigationController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		B142DF5E233279910027681B /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B142DF5B23325C640027681B /* DatabaseRepresentation.swift */,
+				B142DF512331EE650027681B /* Message.swift */,
+				B142DF552331FA980027681B /* UserChat.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B142DF5F233279DD0027681B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B142DF402331D7F20027681B /* Assets.xcassets */,
+				B142DF3D2331D7EB0027681B /* Main.storyboard */,
+				B142DF422331D7F20027681B /* LaunchScreen.storyboard */,
+				B142DF452331D7F20027681B /* Info.plist */,
+				B142DF5923320A1D0027681B /* GoogleService-Info.plist */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -380,7 +404,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/kiwari-ios-test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -398,7 +422,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = "kiwari-ios-test/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/kiwari-ios-test/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
