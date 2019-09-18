@@ -33,7 +33,7 @@
 import Foundation
 import MessageKit
 
-struct User: SenderType, Equatable {
+struct UserChat: SenderType, Equatable {
     var senderId: String
     var displayName: String
 }

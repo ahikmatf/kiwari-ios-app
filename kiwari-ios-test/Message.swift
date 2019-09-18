@@ -33,39 +33,80 @@
 import Foundation
 import UIKit
 import MessageKit
-
-struct Member {
-    let name: String
-    let color: UIColor
-}
+import FirebaseFirestore
 
 internal struct Message: MessageType {
-    
-    var messageId: String
-    var sender: SenderType {
-        return user
-    }
+
+    var messageId: String = UUID().uuidString
+    var sender: SenderType
     var sentDate: Date
     var kind: MessageKind
+    var content: String
     
-    var user: User
     
-    private init(kind: MessageKind, user: User, messageId: String, date: Date) {
-        self.kind = kind
-        self.user = user
-        self.messageId = messageId
-        self.sentDate = date
+    init(content: String, user: UserChat) {
+        self.content = content
+        self.sender = user
+        self.sentDate = Date()
+        self.kind = MessageKind.text(content)
     }
     
-    init(text: String, user: User, messageId: String, date: Date) {
-        self.init(kind: .text(text), user: user, messageId: messageId, date: date)
+    init?(document: QueryDocumentSnapshot) {
+        let data = document.data()
+        print("YEEEY")
+        print(data)
+        
+        guard let senderID = data["senderID"] as? String else {
+            print("error id")
+            return nil
+        }
+        guard let senderName = data["senderName"] as? String else {
+            print("error name")
+            return nil
+        }
+        guard let content = data["content"] as? String else {
+            print("error content")
+            return nil
+        }
+        guard let sentDate = data["created"] as? Timestamp else {
+            print("error date")
+            return nil
+        }
+
+        
+        messageId = document.documentID
+        
+        self.sentDate = sentDate.dateValue()
+        self.content = content
+        self.kind = MessageKind.text(content)
+        sender = UserChat(senderId: senderID, displayName: senderName)
+        
     }
     
-    init(attributedText: NSAttributedString, user: User, messageId: String, date: Date) {
-        self.init(kind: .attributedText(attributedText), user: user, messageId: messageId, date: date)
+}
+
+extension Message: DatabaseRepresentation {
+    
+    var representation: [String : Any] {
+        let rep: [String : Any] = [
+            "created": sentDate,
+            "senderID": sender.senderId,
+            "senderName": sender.displayName,
+            "content": content
+        ]
+        return rep
     }
     
-    init(emoji: String, user: User, messageId: String, date: Date) {
-        self.init(kind: .emoji(emoji), user: user, messageId: messageId, date: date)
+}
+
+extension Message: Comparable {
+    
+    static func == (lhs: Message, rhs: Message) -> Bool {
+        return lhs.messageId == rhs.messageId
     }
+    
+    static func < (lhs: Message, rhs: Message) -> Bool {
+        return lhs.sentDate < rhs.sentDate
+    }
+    
 }

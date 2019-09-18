@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
             guard self != nil else { return }
             // ...
             if error == nil {
+                UserDefaults.standard.set(email!, forKey: "email")
                 self?.navigateToMainNavigation()
             } else {
                 self?.displayErrorLoginAlert()

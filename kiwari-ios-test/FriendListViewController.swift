@@ -31,23 +31,25 @@ class FriendListViewController: UITableViewController {
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        checkAuthState()
+        
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Uncomment the following line to preserve selection between presentations
         self.clearsSelectionOnViewWillAppear = false
         title = "Friends"
         
-        loadFriendList()
+        checkAuthState()
     }
     
     func checkAuthState() {
-        if Auth.auth().currentUser != nil {
+        let mySelf = Auth.auth().currentUser
+        if mySelf != nil {
             // User is signed in.
             // ...
+            loadFriendList()
         } else {
             // No user is signed in.
             // ...
@@ -67,10 +69,14 @@ class FriendListViewController: UITableViewController {
     }
     
     func excludeMyself(users: Array<QueryDocumentSnapshot>) {
-        let myself = Auth.auth().currentUser?.email
-        
-        myFriends = users.filter { (user) -> Bool in
-            user["email"] as? String != myself
+
+        for user in users {
+            if user["email"] as? String == UserDefaults.standard.string(forKey: "email") ?? "" {
+                UserDefaults.standard.set(user["name"], forKey: "name")
+                UserDefaults.standard.set(user["avatar"], forKey: "avatar")
+            } else {
+                myFriends.append(user)
+            }
         }
         
         self.tableView.reloadData()
@@ -113,6 +119,14 @@ class FriendListViewController: UITableViewController {
 
         return cell
     }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        UserDefaults.standard.set(myFriends[indexPath.row]["email"], forKey: "friendEmail")
+        UserDefaults.standard.set(myFriends[indexPath.row]["avatar"], forKey: "friendAvatar")
+        UserDefaults.standard.set(myFriends[indexPath.row]["name"], forKey: "friendName")
+        
+        navigationController?.pushViewController(ChatViewController(), animated: true)
+    }
 
     // MARK: - Navigation
 
@@ -120,6 +134,7 @@ class FriendListViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+
     }
 
 }
