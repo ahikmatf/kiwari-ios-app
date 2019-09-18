@@ -3,25 +3,39 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		B142DF3A2331D7EB0027681B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF392331D7EB0027681B /* AppDelegate.swift */; };
-		B142DF3C2331D7EB0027681B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF3B2331D7EB0027681B /* ViewController.swift */; };
+		B142DF3C2331D7EB0027681B /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF3B2331D7EB0027681B /* LoginViewController.swift */; };
 		B142DF3F2331D7EB0027681B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B142DF3D2331D7EB0027681B /* Main.storyboard */; };
 		B142DF412331D7F20027681B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B142DF402331D7F20027681B /* Assets.xcassets */; };
 		B142DF442331D7F20027681B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B142DF422331D7F20027681B /* LaunchScreen.storyboard */; };
+		B142DF502331ECF70027681B /* FriendListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF4F2331ECF70027681B /* FriendListViewController.swift */; };
+		B142DF522331EE650027681B /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF512331EE650027681B /* Message.swift */; };
+		B142DF542331EFD30027681B /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF532331EFD30027681B /* ChatViewController.swift */; };
+		B142DF562331FA980027681B /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF552331FA980027681B /* User.swift */; };
+		B142DF58233205DC0027681B /* MainNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B142DF57233205DC0027681B /* MainNavigationController.swift */; };
+		D6C640918252367CA865D2C5 /* Pods_kiwari_ios_test.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 804054587CD02433FC097EB4 /* Pods_kiwari_ios_test.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2141335BEE6C1DBE5B176416 /* Pods-kiwari-ios-test.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.release.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.release.xcconfig"; sourceTree = "<group>"; };
+		804054587CD02433FC097EB4 /* Pods_kiwari_ios_test.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_kiwari_ios_test.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B142DF362331D7EB0027681B /* kiwari-ios-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "kiwari-ios-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B142DF392331D7EB0027681B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B142DF3B2331D7EB0027681B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B142DF3B2331D7EB0027681B /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		B142DF3E2331D7EB0027681B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B142DF402331D7F20027681B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B142DF432331D7F20027681B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B142DF452331D7F20027681B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B142DF4F2331ECF70027681B /* FriendListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListViewController.swift; sourceTree = "<group>"; };
+		B142DF512331EE650027681B /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		B142DF532331EFD30027681B /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		B142DF552331FA980027681B /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B142DF57233205DC0027681B /* MainNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNavigationController.swift; sourceTree = "<group>"; };
+		BD334D8BF6B3049D8227A995 /* Pods-kiwari-ios-test.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-kiwari-ios-test.debug.xcconfig"; path = "Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +43,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6C640918252367CA865D2C5 /* Pods_kiwari_ios_test.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19B05F24F6F9F0E4240F2097 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BD334D8BF6B3049D8227A995 /* Pods-kiwari-ios-test.debug.xcconfig */,
+				2141335BEE6C1DBE5B176416 /* Pods-kiwari-ios-test.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		6A9F0B4857A93EAECAD840DA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				804054587CD02433FC097EB4 /* Pods_kiwari_ios_test.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		B142DF2D2331D7EB0027681B = {
 			isa = PBXGroup;
 			children = (
 				B142DF382331D7EB0027681B /* kiwari-ios-test */,
 				B142DF372331D7EB0027681B /* Products */,
+				19B05F24F6F9F0E4240F2097 /* Pods */,
+				6A9F0B4857A93EAECAD840DA /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +88,17 @@
 		B142DF382331D7EB0027681B /* kiwari-ios-test */ = {
 			isa = PBXGroup;
 			children = (
+				B142DF4F2331ECF70027681B /* FriendListViewController.swift */,
 				B142DF392331D7EB0027681B /* AppDelegate.swift */,
-				B142DF3B2331D7EB0027681B /* ViewController.swift */,
+				B142DF3B2331D7EB0027681B /* LoginViewController.swift */,
 				B142DF3D2331D7EB0027681B /* Main.storyboard */,
 				B142DF402331D7F20027681B /* Assets.xcassets */,
 				B142DF422331D7F20027681B /* LaunchScreen.storyboard */,
 				B142DF452331D7F20027681B /* Info.plist */,
+				B142DF512331EE650027681B /* Message.swift */,
+				B142DF532331EFD30027681B /* ChatViewController.swift */,
+				B142DF552331FA980027681B /* User.swift */,
+				B142DF57233205DC0027681B /* MainNavigationController.swift */,
 			);
 			path = "kiwari-ios-test";
 			sourceTree = "<group>";
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = B142DF482331D7F20027681B /* Build configuration list for PBXNativeTarget "kiwari-ios-test" */;
 			buildPhases = (
+				5BD4819691CC471DDCBCCA6E /* [CP] Check Pods Manifest.lock */,
 				B142DF322331D7EB0027681B /* Sources */,
 				B142DF332331D7EB0027681B /* Frameworks */,
 				B142DF342331D7EB0027681B /* Resources */,
+				CDF407A43703A5DF38778320 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -130,13 +171,60 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5BD4819691CC471DDCBCCA6E /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-kiwari-ios-test-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CDF407A43703A5DF38778320 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		B142DF322331D7EB0027681B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B142DF3C2331D7EB0027681B /* ViewController.swift in Sources */,
+				B142DF3C2331D7EB0027681B /* LoginViewController.swift in Sources */,
 				B142DF3A2331D7EB0027681B /* AppDelegate.swift in Sources */,
+				B142DF562331FA980027681B /* User.swift in Sources */,
+				B142DF502331ECF70027681B /* FriendListViewController.swift in Sources */,
+				B142DF58233205DC0027681B /* MainNavigationController.swift in Sources */,
+				B142DF542331EFD30027681B /* ChatViewController.swift in Sources */,
+				B142DF522331EE650027681B /* Message.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +368,7 @@
 		};
 		B142DF492331D7F20027681B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD334D8BF6B3049D8227A995 /* Pods-kiwari-ios-test.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +386,7 @@
 		};
 		B142DF4A2331D7F20027681B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2141335BEE6C1DBE5B176416 /* Pods-kiwari-ios-test.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

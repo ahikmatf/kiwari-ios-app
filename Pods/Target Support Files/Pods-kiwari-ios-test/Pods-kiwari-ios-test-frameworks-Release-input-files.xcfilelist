@@ -1,0 +1,3 @@
+${PODS_ROOT}/Target Support Files/Pods-kiwari-ios-test/Pods-kiwari-ios-test-frameworks.sh
+${BUILT_PRODUCTS_DIR}/InputBarAccessoryView/InputBarAccessoryView.framework
+${BUILT_PRODUCTS_DIR}/MessageKit/MessageKit.framework
