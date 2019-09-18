@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseAuth
+import FirebaseFirestore
 
 class FriendListCell: UITableViewCell {
     @IBOutlet weak var friendNameLabel: UILabel!
@@ -16,6 +17,8 @@ class FriendListCell: UITableViewCell {
 }
 
 class FriendListViewController: UITableViewController {
+
+    var myFriends: [QueryDocumentSnapshot] = []
     
     @IBAction func logOutButton(_ sender: Any) {
         let firebaseAuth = Auth.auth()
@@ -35,10 +38,10 @@ class FriendListViewController: UITableViewController {
         super.viewDidLoad()
 
         // Uncomment the following line to preserve selection between presentations
-         self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-//         self.navigationItem.rightBarButtonItem = self.editButtonItem
+        self.clearsSelectionOnViewWillAppear = false
+        title = "Friends"
+        
+        loadFriendList()
     }
     
     func checkAuthState() {
@@ -50,6 +53,28 @@ class FriendListViewController: UITableViewController {
             // ...
             navigateToLoginPage()
         }
+    }
+    
+    func loadFriendList () {
+        let db = Firestore.firestore()
+        db.collection("users").getDocuments() { (querySnapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                self.excludeMyself(users: querySnapshot!.documents)
+            }
+        }
+    }
+    
+    func excludeMyself(users: Array<QueryDocumentSnapshot>) {
+        let myself = Auth.auth().currentUser?.email
+        
+        myFriends = users.filter { (user) -> Bool in
+            user["email"] as? String != myself
+        }
+        
+        self.tableView.reloadData()
+        
     }
     
     func navigateToLoginPage() {
@@ -72,13 +97,17 @@ class FriendListViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 5
+        return myFriends.count
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell", for: indexPath) as! FriendListCell
         
-        cell.friendNameLabel.text = "WGWG \(indexPath.row)"
+        cell.friendNameLabel.text = myFriends[indexPath.row]["name"] as? String
+        
+        let url = URL(string: myFriends[indexPath.row]["avatar"] as! String)
+        let data = try? Data(contentsOf: url!)
+        cell.friendImageView.image = UIImage(data: data!)
 
         
 
